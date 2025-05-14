@@ -64,7 +64,7 @@ Recommended: stacks = 128, slices = 128 or higher for smooth shading.
 
 ## Results
 <br><br>
-![image](https://github.com/user-attachments/assets/08a9d7b5-b759-4d94-aaed-a8f0a26a3cfa)
+![image](https://github.com/user-attachments/assets/1936c6d9-9c4e-4b71-b70c-1921b35c63b0)
 <br>
 Flat Shading
 

@@ -12,8 +12,8 @@ static float* gVertexBuffer = NULL; // Vertex positions (x, y, z triples).
 
 static void create_scene()
 {
-    int width = 32;
-    int height = 16;
+    int width = 128;
+    int height = 128;
 
     float theta, phi;
     int t;

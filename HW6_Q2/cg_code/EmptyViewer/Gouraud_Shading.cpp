@@ -77,17 +77,15 @@ void render() {
 		float sz = clip.z;
 		screenVertices[i] = glm::vec4(sx, sy, sz, 1.0f);
 
-		glm::vec4 world_v = model * v;
-		glm::vec3 pos = glm::vec3(world_v);
-
+		glm::vec3 worldPos = glm::vec3(model * v);
 		glm::vec3 normal_model(
 			gNormalBuffer[3 * i + 0],
 			gNormalBuffer[3 * i + 1],
 			gNormalBuffer[3 * i + 2]
 		);
-		glm::vec3 normal_world = glm::normalize(normalMatrix * normal_model);
+		glm::vec3 worldNormal = glm::normalize(normalMatrix * normal_model);
 
-		vertexColors[i] = compute_phong_lighting_raw(pos, normal_world);
+		vertexColors[i] = compute_phong_lighting_raw(worldPos, worldNormal);
 	}
 
 	for (int i = 0; i < gNumTriangles; ++i) {
@@ -134,6 +132,7 @@ void render() {
 		}
 	}
 }
+
 
 
 void resize_callback(GLFWwindow*, int nw, int nh) 
